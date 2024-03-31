@@ -31,13 +31,25 @@ To use **reLowCased** on your iOS device, follow these steps:
 
 ## Screenshots
 
-![Home](https://github.com/xMpR13/reLowCased/assets/126524261/a4254cbc-f770-4341-a129-f1471bee0d09)
-![Convert_1](https://github.com/xMpR13/reLowCased/assets/126524261/eb899194-ad8c-4026-8b52-ed4e79d94bba)
-![Convert_2](https://github.com/xMpR13/reLowCased/assets/126524261/33bda502-71ac-4f2b-ac98-6067ea4cba2d)
-![Convert_3](https://github.com/xMpR13/reLowCased/assets/126524261/4c90dfc8-59db-4822-b81d-07a7a95b4a7d)
-![Encrypt](https://github.com/xMpR13/reLowCased/assets/126524261/d0d82f5f-0fe2-4102-85d9-15bfa46324b8)
+<img src="https://github.com/xMpR13/reLowCased/assets/126524261/a4254cbc-f770-4341-a129-f1471bee0d09" alt="Home" width="38%">
 
-![Decrypt](https://github.com/xMpR13/reLowCased/assets/126524261/2aeb699b-b4e3-42a5-9f44-c4c6c87697da)
+
+<img src="https://github.com/xMpR13/reLowCased/assets/126524261/eb899194-ad8c-4026-8b52-ed4e79d94bba" alt="Convert_1" width="38%">
+
+
+<img src="https://github.com/xMpR13/reLowCased/assets/126524261/33bda502-71ac-4f2b-ac98-6067ea4cba2d" alt="Convert_2" width="38%">
+
+
+
+<img src="https://github.com/xMpR13/reLowCased/assets/126524261/4c90dfc8-59db-4822-b81d-07a7a95b4a7d" alt="Convert_3" width="38%">
+
+
+
+<img src="https://github.com/xMpR13/reLowCased/assets/126524261/d0d82f5f-0fe2-4102-85d9-15bfa46324b8" alt="Encrypt" width="38%">
+
+
+<img src="https://github.com/xMpR13/reLowCased/assets/126524261/2aeb699b-b4e3-42a5-9f44-c4c6c87697da" alt="Decrypt" width="38%">
+
 
 
 
