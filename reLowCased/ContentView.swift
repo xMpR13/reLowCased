@@ -1,83 +1,66 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var inputText: String = ""
-    @State private var convertedText: String = ""
-    @State private var isKeyboardVisible = false
-    
     var body: some View {
-        VStack(spacing: 20) {
-            TextField("Enter text here", text: $inputText) { isEditing in
-                self.isKeyboardVisible = isEditing
-            }
-            .padding()
-            .background(Color.blue.opacity(0.2))
-            .cornerRadius(10)
-            .padding(.horizontal, 20)
-            
-            HStack(spacing: 20) {
-                Button("to Lowercase") {
-                    convertedText = inputText.lowercased()
-                   hideKeyboard()
-                }
-                .padding()
-                .foregroundColor(.white)
-                .background(Color.green)
-                .cornerRadius(10)
+        NavigationView {
+            VStack {
+                Spacer()
+                Text("reLowCased")
+                    .bold()
+                    .font(.system(size: 50))
+                    .padding()
+                    .foregroundColor(.white)
+                    .background(Color.orange)
+                    .cornerRadius(10)
+                    .padding(.horizontal, 20)
                 
-                Button("to Uppercase") {
-                    convertedText = inputText.uppercased()
-                   hideKeyboard()
-                }
-                .padding()
-                .foregroundColor(.white)
-                .background(Color.green)
-                .cornerRadius(10)
-            }
-            .padding(.horizontal, 20)
+                Spacer()
             
-            if !convertedText.isEmpty {
-                Button("Copy to Clipboard") {
-                   UIPasteboard.general.string = convertedText
-                    hideKeyboard()
-                }
-                .padding()
-                .foregroundColor(.white)
-                .background(Color.orange)
-                .cornerRadius(10)
-                .padding(.horizontal, 20)
                 
-                Text(convertedText)
+                Text("a simple iOS app using SwiftUI with a text input field, two buttons to convert text to lowercase or uppercase, and an option to copy the converted text to the clipboard. It uses vertical and horizontal stacks for layout and simple color schemes with padding for a clean appearance.")
                     .padding()
                     .background(Color.yellow.opacity(0.2))
                     .cornerRadius(10)
                     .padding(.horizontal, 20)
                 
-                Button("Clear") {
-                    convertedText = ""
-                    inputText = ""
+                
+              Spacer()
+                
+                HStack {
+                    Spacer()
+                    NavigationLink(destination: ToCase()) {
+                        Text("toUpLowCase")
+                            .padding()
+                            .foregroundColor(.white)
+                            .background(Color.green)
+                            .cornerRadius(10)
+                    }
+                    .font(.title2)
+                    .foregroundColor(.white)
+                    .padding()
+                    .cornerRadius(5.0)
+                    
+                    
+                    Spacer()
+                    NavigationLink(destination: ToEncrypt()) {
+                        Text("toEncrypt")
+                            .padding()
+                            .foregroundColor(.white)
+                            .background(Color.green)
+                            .cornerRadius(10)
+                    }
+                    .font(.title2)
+                    .foregroundColor(.white)
+                    .padding()
+                    .cornerRadius(5.0)
+                    
+                    Spacer()
                 }
-                .padding()
-                .foregroundColor(.white)
-                .background(Color.red)
-                .cornerRadius(10)
-                .padding(.horizontal, 20)
+                Spacer()
             }
-            
-            Spacer()
-            
-            Text("One cannot acquire something without sacrificing something equally valuable in exchange.")
-                .foregroundColor(.white)
-                .padding(10)
-                .background(Color.orange)
-                .cornerRadius(20)
-            
+            .navigationBarTitle("reLowCased")
+           
         }
-        .padding()
-    }
-    
-   private func hideKeyboard() {
-        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
 }
 

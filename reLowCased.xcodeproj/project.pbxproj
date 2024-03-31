@@ -14,6 +14,8 @@
 		03AC45FB2BB7740A00A47D51 /* reLowCasedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AC45FA2BB7740A00A47D51 /* reLowCasedTests.swift */; };
 		03AC46052BB7740A00A47D51 /* reLowCasedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AC46042BB7740A00A47D51 /* reLowCasedUITests.swift */; };
 		03AC46072BB7740A00A47D51 /* reLowCasedUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AC46062BB7740A00A47D51 /* reLowCasedUITestsLaunchTests.swift */; };
+		03D4A7752BB9C909009B6DE2 /* ToCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D4A7742BB9C909009B6DE2 /* ToCase.swift */; };
+		03D4A7772BB9D338009B6DE2 /* ToEncrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D4A7762BB9D338009B6DE2 /* ToEncrypt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		03AC46002BB7740A00A47D51 /* reLowCasedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = reLowCasedUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03AC46042BB7740A00A47D51 /* reLowCasedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reLowCasedUITests.swift; sourceTree = "<group>"; };
 		03AC46062BB7740A00A47D51 /* reLowCasedUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reLowCasedUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		03D4A7742BB9C909009B6DE2 /* ToCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToCase.swift; sourceTree = "<group>"; };
+		03D4A7762BB9D338009B6DE2 /* ToEncrypt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToEncrypt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +100,9 @@
 			isa = PBXGroup;
 			children = (
 				03AC45E82BB7740800A47D51 /* reLowCasedApp.swift */,
+				03D4A7762BB9D338009B6DE2 /* ToEncrypt.swift */,
 				03AC45EA2BB7740800A47D51 /* ContentView.swift */,
+				03D4A7742BB9C909009B6DE2 /* ToCase.swift */,
 				03AC45EC2BB7740A00A47D51 /* Assets.xcassets */,
 				03AC45EE2BB7740A00A47D51 /* reLowCased.entitlements */,
 				03AC45EF2BB7740A00A47D51 /* Preview Content */,
@@ -261,6 +267,8 @@
 			files = (
 				03AC45EB2BB7740800A47D51 /* ContentView.swift in Sources */,
 				03AC45E92BB7740800A47D51 /* reLowCasedApp.swift in Sources */,
+				03D4A7772BB9D338009B6DE2 /* ToEncrypt.swift in Sources */,
+				03D4A7752BB9C909009B6DE2 /* ToCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
