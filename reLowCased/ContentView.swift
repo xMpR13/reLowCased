@@ -5,7 +5,8 @@ struct ContentView: View {
         NavigationView {
             VStack {
                 Spacer()
-                Text("reLowCased")
+                Spacer()
+                Text("ReLowCased")
                     .bold()
                     .font(.system(size: 50))
                     .padding()
@@ -17,20 +18,19 @@ struct ContentView: View {
                 Spacer()
             
                 
-                Text("a simple iOS app using SwiftUI with a text input field, two buttons to convert text to lowercase or uppercase, and an option to copy the converted text to the clipboard. It uses vertical and horizontal stacks for layout and simple color schemes with padding for a clean appearance.")
+                Text("This iOS app built with SwiftUI offers text manipulation features, allowing users to convert text to lowercase/uppercase and encrypt it using a Caesar cipher. It provides a clean interface with straightforward navigation and functionality, making it easy to use for modifying and securing text on iOS devices.")
                     .padding()
                     .background(Color.yellow.opacity(0.2))
                     .cornerRadius(10)
                     .padding(.horizontal, 20)
                 
+       
                 
-              Spacer()
+                VStack {
                 
-                HStack {
-                    Spacer()
                     NavigationLink(destination: ToCase()) {
-                        Text("toUpLowCase")
-                            .padding()
+                        Text("UPLOWCASE")
+                            .frame(maxWidth: .infinity, minHeight: 50)
                             .foregroundColor(.white)
                             .background(Color.green)
                             .cornerRadius(10)
@@ -41,10 +41,9 @@ struct ContentView: View {
                     .cornerRadius(5.0)
                     
                     
-                    Spacer()
                     NavigationLink(destination: ToEncrypt()) {
-                        Text("toEncrypt")
-                            .padding()
+                        Text("DE-ENCRYPT")
+                            .frame(maxWidth: .infinity, minHeight: 50)
                             .foregroundColor(.white)
                             .background(Color.green)
                             .cornerRadius(10)
@@ -54,11 +53,27 @@ struct ContentView: View {
                     .padding()
                     .cornerRadius(5.0)
                     
-                    Spacer()
+                    
+                    NavigationLink(destination: TextToSpeech()) {
+                        Text("TextToSpeech")
+                            .frame(maxWidth: .infinity, minHeight: 50)
+                            .foregroundColor(.white)
+                            .background(Color.green)
+                            .cornerRadius(10)
+                    }
+                    .font(.title2)
+                    .foregroundColor(.white)
+                    .padding()
+                    .cornerRadius(5.0)
+                   
                 }
-                Spacer()
+               
+                Text("super")
+                    .foregroundColor(.gray)
+                    .padding(10)
+                    .cornerRadius(20)
             }
-            .navigationBarTitle("reLowCased")
+            .navigationBarTitle("ReLowCased")
            
         }
     }

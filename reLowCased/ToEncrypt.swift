@@ -1,10 +1,3 @@
-//
-//  ToEncrypt.swift
-//  reLowCased
-//
-//  Created by Prosper Mpuru on 2024/03/31.
-//
-
 import SwiftUI
 
 struct ToEncrypt: View {
@@ -27,6 +20,11 @@ struct ToEncrypt: View {
                 .background(Color.blue.opacity(0.2))
                 .cornerRadius(10)
                 .padding(.horizontal, 20)
+                .onTapGesture {
+                    if let clipboardContent = UIPasteboard.general.string {
+                        inputText = clipboardContent
+                    }
+                }
 
             if isTextVisible {
                 Text(encryptedText)
@@ -80,11 +78,17 @@ struct ToEncrypt: View {
                     .cornerRadius(10)
             }
             .padding(.horizontal, 20)
+            
+            Text("super")
+                .foregroundColor(.gray)
+                .padding(10)
+                .cornerRadius(20)
         }
         .padding()
         .onTapGesture {
             hideKeyboard()
         }
+        
     }
 
     private func encryptOrDecrypt(_ input: String, shift: Int) -> String {

@@ -1,10 +1,3 @@
-//
-//  ToCase.swift
-//  reLowCased
-//
-//  Created by Prosper Mpuru on 2024/03/31.
-//
-
 import SwiftUI
 
 struct ToCase: View {
@@ -12,12 +5,12 @@ struct ToCase: View {
     @State private var inputText: String = ""
     @State private var convertedText: String = ""
     @State private var isKeyboardVisible = false
+    
     var body: some View {
         VStack(spacing: 20) {
             Text("Convert")
                 .font(.system(size: 50))
                 .bold()
-            
             
             TextField("Enter text here", text: $inputText) { isEditing in
                 self.isKeyboardVisible = isEditing
@@ -30,7 +23,7 @@ struct ToCase: View {
             HStack(spacing: 20) {
                 Button("to Lowercase") {
                     convertedText = inputText.lowercased()
-                   hideKeyboard()
+                    hideKeyboard()
                 }
                 .padding()
                 .foregroundColor(.white)
@@ -39,7 +32,7 @@ struct ToCase: View {
                 
                 Button("to Uppercase") {
                     convertedText = inputText.uppercased()
-                   hideKeyboard()
+                    hideKeyboard()
                 }
                 .padding()
                 .foregroundColor(.white)
@@ -50,7 +43,7 @@ struct ToCase: View {
             
             if !convertedText.isEmpty {
                 Button("Copy to Clipboard") {
-                   UIPasteboard.general.string = convertedText
+                    UIPasteboard.general.string = convertedText
                     hideKeyboard()
                 }
                 .padding()
@@ -82,17 +75,21 @@ struct ToCase: View {
                 .foregroundColor(.gray)
                 .padding(10)
                 .cornerRadius(20)
-            
-        }.padding()
+        }
+        .padding()
+        .onTapGesture {
+            hideKeyboard()
+        }
     }
     
     //function to hide the keyboard
     private func hideKeyboard() {
-         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-     }
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    }
 }
 
-#Preview {
-    ToCase()
+struct ToCase_Previews: PreviewProvider {
+    static var previews: some View {
+        ToCase()
+    }
 }
-
