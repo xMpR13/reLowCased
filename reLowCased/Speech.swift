@@ -67,7 +67,14 @@ struct TextToSpeech: View {
             .padding(.horizontal, 20)
 
             Spacer()
+            
+            Text("super")
+                .foregroundColor(.gray)
+                .padding(10)
+                .cornerRadius(20)
         }
+        
+        
         .padding()
     }
 

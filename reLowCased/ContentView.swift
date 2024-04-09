@@ -42,7 +42,7 @@ struct ContentView: View {
                     
                     
                     NavigationLink(destination: ToEncrypt()) {
-                        Text("DE-ENCRYPT")
+                        Text("DE/ENCRYPT")
                             .frame(maxWidth: .infinity, minHeight: 50)
                             .foregroundColor(.white)
                             .background(Color.green)
