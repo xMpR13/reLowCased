@@ -49,18 +49,3 @@ To use **reLowCased** on your iOS device, follow these steps:
 
 
 <img src="https://github.com/xMpR13/reLowCased/assets/126524261/2aeb699b-b4e3-42a5-9f44-c4c6c87697da" alt="Decrypt" width="38%">
-
-
-
-
-
-## Contributing
-
-Contributions to **reLowCased** are welcome! To contribute:
-
-1. Fork this repository.
-2. Create a new branch for your feature (`git checkout -b feature-name`).
-3. Commit your changes (`git commit -am 'Add new feature'`).
-4. Push to the branch (`git push origin feature-name`).
-5. Create a new Pull Request.
-
