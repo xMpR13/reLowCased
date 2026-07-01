@@ -2,80 +2,78 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        NavigationView {
-            VStack {
-                Spacer()
-                Spacer()
-                Text("ReLowCased")
-                    .bold()
-                    .font(.system(size: 50))
-                    .padding()
-                    .foregroundColor(.white)
-                    .background(Color.orange)
-                    .cornerRadius(10)
-                    .padding(.horizontal, 20)
+        NavigationStack {
+            VStack(spacing: 30) {
                 
-                Spacer()
-            
+                Spacer().frame(height: 10)
                 
-                Text("This iOS app built with SwiftUI offers text manipulation features, allowing users to convert text to lowercase/uppercase and encrypt it using a Caesar cipher. It provides a clean interface with straightforward navigation and functionality, making it easy to use for modifying and securing text on iOS devices.")
-                    .padding()
-                    .background(Color.yellow.opacity(0.2))
-                    .cornerRadius(10)
-                    .padding(.horizontal, 20)
-                
-       
-                
-                VStack {
-                
-                    NavigationLink(destination: ToCase()) {
-                        Text("UPLOWCASE")
-                            .frame(maxWidth: .infinity, minHeight: 50)
-                            .foregroundColor(.white)
-                            .background(Color.green)
-                            .cornerRadius(10)
-                    }
-                    .font(.title2)
-                    .foregroundColor(.white)
-                    .padding()
-                    .cornerRadius(5.0)
+                // MARK: - Header
+                VStack(spacing: 5) {
+                    Text("ReLowCased")
+                        .font(.system(size: 42, weight: .heavy, design: .rounded))
+                        .foregroundStyle(Color.accentColor)
                     
+                    Text("Text Manipulation Utility")
+                        .font(.headline)
+                        .foregroundColor(.secondary)
+                }
+                
+                // MARK: - Description Card
+                Text("This app offers text manipulation features, allowing users to convert text cases, encrypt using a Caesar cipher, and utilize text-to-speech. It provides a clean interface for modifying and securing text.")
+                    .font(.subheadline)
+                    .multilineTextAlignment(.center)
+                    .lineSpacing(4)
+                    .padding()
+                    .background(Color(UIColor.secondarySystemBackground))
+                    .clipShape(RoundedRectangle(cornerRadius: 16))
+                    .padding(.horizontal, 20)
+                
+                // MARK: - Navigation Buttons
+                VStack(spacing: 16) {
+                    NavigationLink(destination: ToCase()) {
+                        MenuButtonView(title: "Up / Low Case", iconName: "textformat")
+                    }
                     
                     NavigationLink(destination: ToEncrypt()) {
-                        Text("DE/ENCRYPT")
-                            .frame(maxWidth: .infinity, minHeight: 50)
-                            .foregroundColor(.white)
-                            .background(Color.green)
-                            .cornerRadius(10)
+                        MenuButtonView(title: "De / Encrypt", iconName: "lock.shield.fill")
                     }
-                    .font(.title2)
-                    .foregroundColor(.white)
-                    .padding()
-                    .cornerRadius(5.0)
-                    
                     
                     NavigationLink(destination: TextToSpeech()) {
-                        Text("TextToSpeech")
-                            .frame(maxWidth: .infinity, minHeight: 50)
-                            .foregroundColor(.white)
-                            .background(Color.green)
-                            .cornerRadius(10)
+                        MenuButtonView(title: "Text to Speech", iconName: "waveform")
                     }
-                    .font(.title2)
-                    .foregroundColor(.white)
-                    .padding()
-                    .cornerRadius(5.0)
-                   
                 }
-               
-                Text("super")
-                    .foregroundColor(.gray)
-                    .padding(10)
-                    .cornerRadius(20)
+                .padding(.horizontal, 20)
+                
+                Spacer()
+                
+                // MARK: - Footer
+                Text("super, like the guy from one piece")
+                    .font(.footnote)
+                    .foregroundColor(.secondary)
+                    .padding(.bottom, 10)
             }
-            .navigationBarTitle("ReLowCased")
-           
         }
+    }
+}
+
+// MARK: - Reusable Button Component
+struct MenuButtonView: View {
+    var title: String
+    var iconName: String
+    
+    var body: some View {
+        HStack(spacing: 12) {
+            Image(systemName: iconName)
+                .font(.title2)
+            
+            Text(title)
+                .font(.title3.bold())
+        }
+        .frame(maxWidth: .infinity, minHeight: 60)
+        .foregroundColor(.white)
+        .background(Color.accentColor)
+        .clipShape(RoundedRectangle(cornerRadius: 14))
+        .shadow(color: Color.black.opacity(0.15), radius: 5, x: 0, y: 4)
     }
 }
 

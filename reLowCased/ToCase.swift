@@ -1,95 +1,106 @@
 import SwiftUI
 
 struct ToCase: View {
-    
     @State private var inputText: String = ""
     @State private var convertedText: String = ""
-    @State private var isKeyboardVisible = false
+    @FocusState private var isInputFocused: Bool
     
     var body: some View {
-        VStack(spacing: 20) {
-            Text("Convert")
-                .font(.system(size: 50))
-                .bold()
-            
-            TextField("Enter text here", text: $inputText) { isEditing in
-                self.isKeyboardVisible = isEditing
+        ScrollView {
+            VStack(spacing: 24) {
+                
+                VStack(alignment: .leading, spacing: 8) {
+                    Text("Input Text")
+                        .font(.headline)
+                        .foregroundColor(.secondary)
+                    
+                    TextField("Enter text to convert...", text: $inputText, axis: .vertical)
+                        .lineLimit(4...8)
+                        .padding()
+                        .background(Color(UIColor.secondarySystemBackground))
+                        .clipShape(RoundedRectangle(cornerRadius: 12))
+                        .focused($isInputFocused)
+                }
+                
+                HStack(spacing: 16) {
+                    Button {
+                        withAnimation { convertedText = inputText.lowercased() }
+                        isInputFocused = false
+                    } label: {
+                        Label("Lowercase", systemImage: "textformat.size.smaller")
+                            .frame(maxWidth: .infinity)
+                    }
+                    .buttonStyle(.borderedProminent)
+                    .controlSize(.large)
+                    
+                    Button {
+                        withAnimation { convertedText = inputText.uppercased() }
+                        isInputFocused = false
+                    } label: {
+                        Label("Uppercase", systemImage: "textformat.size.larger")
+                            .frame(maxWidth: .infinity)
+                    }
+                    .buttonStyle(.borderedProminent)
+                    .controlSize(.large)
+                }
+                
+                if !convertedText.isEmpty {
+                    VStack(spacing: 16) {
+                        Divider().padding(.vertical, 8)
+                        
+                        VStack(alignment: .leading, spacing: 8) {
+                            Text("Result")
+                                .font(.headline)
+                                .foregroundColor(.secondary)
+                            
+                            Text(convertedText)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .padding()
+                                .background(Color(UIColor.tertiarySystemBackground))
+                                .overlay(RoundedRectangle(cornerRadius: 12).stroke(Color.gray.opacity(0.3), lineWidth: 1))
+                                .clipShape(RoundedRectangle(cornerRadius: 12))
+                        }
+                        
+                        HStack(spacing: 16) {
+                            Button {
+                                UIPasteboard.general.string = convertedText
+                                isInputFocused = false
+                            } label: {
+                                Label("Copy", systemImage: "doc.on.doc")
+                                    .frame(maxWidth: .infinity)
+                            }
+                            .buttonStyle(.bordered)
+                            .controlSize(.large)
+                            
+                            Button(role: .destructive) {
+                                withAnimation {
+                                    convertedText = ""
+                                    inputText = ""
+                                }
+                                isInputFocused = false
+                            } label: {
+                                Label("Clear", systemImage: "trash")
+                                    .frame(maxWidth: .infinity)
+                            }
+                            .buttonStyle(.bordered)
+                            .controlSize(.large)
+                        }
+                    }
+                    .transition(.opacity.combined(with: .move(edge: .top)))
+                }
+                
+                Spacer(minLength: 20)
             }
             .padding()
-            .background(Color.blue.opacity(0.2))
-            .cornerRadius(10)
-            .padding(.horizontal, 20)
-            
-            HStack(spacing: 20) {
-                Button("to Lowercase") {
-                    convertedText = inputText.lowercased()
-                    hideKeyboard()
-                }
-                .padding()
-                .foregroundColor(.white)
-                .background(Color.green)
-                .cornerRadius(10)
-                
-                Button("to Uppercase") {
-                    convertedText = inputText.uppercased()
-                    hideKeyboard()
-                }
-                .padding()
-                .foregroundColor(.white)
-                .background(Color.green)
-                .cornerRadius(10)
-            }
-            .padding(.horizontal, 20)
-            
-            if !convertedText.isEmpty {
-                Button("Copy to Clipboard") {
-                    UIPasteboard.general.string = convertedText
-                    hideKeyboard()
-                }
-                .padding()
-                .foregroundColor(.white)
-                .background(Color.orange)
-                .cornerRadius(10)
-                .padding(.horizontal, 20)
-                
-                Text(convertedText)
-                    .padding()
-                    .background(Color.yellow.opacity(0.2))
-                    .cornerRadius(10)
-                    .padding(.horizontal, 20)
-                
-                Button("Clear") {
-                    convertedText = ""
-                    inputText = ""
-                }
-                .padding()
-                .foregroundColor(.white)
-                .background(Color.red)
-                .cornerRadius(10)
-                .padding(.horizontal, 20)
-            }
-            
-            Spacer()
-            
-            Text("super")
-                .foregroundColor(.gray)
-                .padding(10)
-                .cornerRadius(20)
         }
-        .padding()
-        .onTapGesture {
-            hideKeyboard()
-        }
-    }
-    
-    //function to hide the keyboard
-    private func hideKeyboard() {
-        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+        .navigationTitle("Up / Low Case")
+        .navigationBarTitleDisplayMode(.inline)
+        .onTapGesture { isInputFocused = false }
     }
 }
 
 struct ToCase_Previews: PreviewProvider {
     static var previews: some View {
-        ToCase()
+        NavigationStack { ToCase() }
     }
 }

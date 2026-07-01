@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		037676B72BBE19760039A0CB /* Speech.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037676B62BBE19760039A0CB /* Speech.swift */; };
-		03AC45E92BB7740800A47D51 /* reLowCasedApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AC45E82BB7740800A47D51 /* reLowCasedApp.swift */; };
+		0379238D2FF4E02400CF8C3E /* ToCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0379238C2FF4E02100CF8C3E /* ToCase.swift */; };
+		0379238F2FF4E04A00CF8C3E /* ToEncrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0379238E2FF4E04500CF8C3E /* ToEncrypt.swift */; };
+		037923912FF4E06800CF8C3E /* TextToSpeech.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037923902FF4E06400CF8C3E /* TextToSpeech.swift */; };
+		037923932FF4E12E00CF8C3E /* reLowCasedApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037923922FF4E12A00CF8C3E /* reLowCasedApp.swift */; };
 		03AC45EB2BB7740800A47D51 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AC45EA2BB7740800A47D51 /* ContentView.swift */; };
 		03AC45ED2BB7740A00A47D51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03AC45EC2BB7740A00A47D51 /* Assets.xcassets */; };
 		03AC45F12BB7740A00A47D51 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03AC45F02BB7740A00A47D51 /* Preview Assets.xcassets */; };
 		03AC45FB2BB7740A00A47D51 /* reLowCasedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AC45FA2BB7740A00A47D51 /* reLowCasedTests.swift */; };
 		03AC46052BB7740A00A47D51 /* reLowCasedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AC46042BB7740A00A47D51 /* reLowCasedUITests.swift */; };
 		03AC46072BB7740A00A47D51 /* reLowCasedUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AC46062BB7740A00A47D51 /* reLowCasedUITestsLaunchTests.swift */; };
-		03D4A7752BB9C909009B6DE2 /* ToCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D4A7742BB9C909009B6DE2 /* ToCase.swift */; };
-		03D4A7772BB9D338009B6DE2 /* ToEncrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D4A7762BB9D338009B6DE2 /* ToEncrypt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,9 +37,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		037676B62BBE19760039A0CB /* Speech.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Speech.swift; sourceTree = "<group>"; };
+		0379238C2FF4E02100CF8C3E /* ToCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToCase.swift; sourceTree = "<group>"; };
+		0379238E2FF4E04500CF8C3E /* ToEncrypt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToEncrypt.swift; sourceTree = "<group>"; };
+		037923902FF4E06400CF8C3E /* TextToSpeech.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToSpeech.swift; sourceTree = "<group>"; };
+		037923922FF4E12A00CF8C3E /* reLowCasedApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reLowCasedApp.swift; sourceTree = "<group>"; };
 		03AC45E52BB7740800A47D51 /* reLowCased.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = reLowCased.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		03AC45E82BB7740800A47D51 /* reLowCasedApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reLowCasedApp.swift; sourceTree = "<group>"; };
 		03AC45EA2BB7740800A47D51 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		03AC45EC2BB7740A00A47D51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03AC45EE2BB7740A00A47D51 /* reLowCased.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = reLowCased.entitlements; sourceTree = "<group>"; };
@@ -49,8 +51,6 @@
 		03AC46002BB7740A00A47D51 /* reLowCasedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = reLowCasedUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03AC46042BB7740A00A47D51 /* reLowCasedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reLowCasedUITests.swift; sourceTree = "<group>"; };
 		03AC46062BB7740A00A47D51 /* reLowCasedUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reLowCasedUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		03D4A7742BB9C909009B6DE2 /* ToCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToCase.swift; sourceTree = "<group>"; };
-		03D4A7762BB9D338009B6DE2 /* ToEncrypt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToEncrypt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +101,14 @@
 		03AC45E72BB7740800A47D51 /* reLowCased */ = {
 			isa = PBXGroup;
 			children = (
-				03AC45E82BB7740800A47D51 /* reLowCasedApp.swift */,
-				03D4A7762BB9D338009B6DE2 /* ToEncrypt.swift */,
+				037923922FF4E12A00CF8C3E /* reLowCasedApp.swift */,
+				037923902FF4E06400CF8C3E /* TextToSpeech.swift */,
+				0379238E2FF4E04500CF8C3E /* ToEncrypt.swift */,
+				0379238C2FF4E02100CF8C3E /* ToCase.swift */,
 				03AC45EA2BB7740800A47D51 /* ContentView.swift */,
-				03D4A7742BB9C909009B6DE2 /* ToCase.swift */,
 				03AC45EC2BB7740A00A47D51 /* Assets.xcassets */,
 				03AC45EE2BB7740A00A47D51 /* reLowCased.entitlements */,
 				03AC45EF2BB7740A00A47D51 /* Preview Content */,
-				037676B62BBE19760039A0CB /* Speech.swift */,
 			);
 			path = reLowCased;
 			sourceTree = "<group>";
@@ -202,7 +202,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1530;
-				LastUpgradeCheck = 1530;
+				LastUpgradeCheck = 2660;
 				TargetAttributes = {
 					03AC45E42BB7740800A47D51 = {
 						CreatedOnToolsVersion = 15.3;
@@ -268,11 +268,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				037923932FF4E12E00CF8C3E /* reLowCasedApp.swift in Sources */,
+				0379238D2FF4E02400CF8C3E /* ToCase.swift in Sources */,
+				037923912FF4E06800CF8C3E /* TextToSpeech.swift in Sources */,
+				0379238F2FF4E04A00CF8C3E /* ToEncrypt.swift in Sources */,
 				03AC45EB2BB7740800A47D51 /* ContentView.swift in Sources */,
-				03AC45E92BB7740800A47D51 /* reLowCasedApp.swift in Sources */,
-				03D4A7772BB9D338009B6DE2 /* ToEncrypt.swift in Sources */,
-				03D4A7752BB9C909009B6DE2 /* ToCase.swift in Sources */,
-				037676B72BBE19760039A0CB /* Speech.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,7 +343,9 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 8N4H94QKKZ;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -365,6 +367,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -404,7 +407,9 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 8N4H94QKKZ;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -419,6 +424,7 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 			};
 			name = Release;
@@ -432,8 +438,8 @@
 				CODE_SIGN_ENTITLEMENTS = reLowCased/reLowCased.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"reLowCased/Preview Content\"";
-				DEVELOPMENT_TEAM = 8N4H94QKKZ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -449,10 +455,10 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.6;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.prospermpuru.reLowCased;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -475,8 +481,8 @@
 				CODE_SIGN_ENTITLEMENTS = reLowCased/reLowCased.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"reLowCased/Preview Content\"";
-				DEVELOPMENT_TEAM = 8N4H94QKKZ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -492,10 +498,10 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.6;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.prospermpuru.reLowCased;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -512,11 +518,10 @@
 		03AC460E2BB7740A00A47D51 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8N4H94QKKZ;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				MACOSX_DEPLOYMENT_TARGET = 14.4;
@@ -535,11 +540,10 @@
 		03AC460F2BB7740A00A47D51 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8N4H94QKKZ;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				MACOSX_DEPLOYMENT_TARGET = 14.4;
@@ -558,10 +562,9 @@
 		03AC46112BB7740A00A47D51 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8N4H94QKKZ;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				MACOSX_DEPLOYMENT_TARGET = 14.4;
@@ -580,10 +583,9 @@
 		03AC46122BB7740A00A47D51 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8N4H94QKKZ;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				MACOSX_DEPLOYMENT_TARGET = 14.4;
